@@ -1,10 +1,14 @@
 """Tablero 17X17"""
-
-for i in range (1, 17+ 1):
-    for j in range (1, 17 +1):
-        if (i) % 2 == 0:   
-            print("*", end=" ")
+altura = 13
+for i in range (altura):
+    linea = ""
+    for j in range (altura):
+        contorno = (i==0) or (i==altura) or (j == 0) or (j == altura-1)
+        
+        
+        if contorno:
+            linea += "*"
         else:
-            print(" ", end="")
-    print()    
+            linea += " "        
+    print(linea)    
     
